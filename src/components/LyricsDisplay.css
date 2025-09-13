@@ -1,0 +1,21 @@
+.lyrics-display {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.lyrics-line {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.lyrics-line.active {
+  opacity: 1;
+  transform: scale(1.1);
+  font-weight: bold;
+}
