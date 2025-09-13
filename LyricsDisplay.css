@@ -1,0 +1,61 @@
+.lyrics-display {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.95) 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lyrics-display::-webkit-scrollbar {
+  display: none;
+}
+
+.lyrics-container {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.lyrics-line {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin: 2rem 0;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  letter-spacing: -0.5px;
+  padding: 0.5rem 1rem;
+}
+
+.lyrics-line.active {
+  opacity: 1;
+  transform: scale(1);
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.lyrics-line.pre-active {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+.lyrics-line.post-active {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .lyrics-line {
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+  }
+}
